@@ -614,5 +614,5 @@ The **`disabled`** parameter is useful when you want to temporarily **disable** 
 By using ADB, you can quickly validate and troubleshoot your service, which is a much faster process compared to rebuilding and flashing the full image each time.
 
 # Service Options:
-(Link)[https://android.googlesource.com/platform/system/core/+/refs/tags/android-14.0.0_r67/init/README.md]
+[Link](https://android.googlesource.com/platform/system/core/+/refs/tags/android-14.0.0_r67/init/README.md)
 
