@@ -21,13 +21,13 @@ This README explains the multi-layered architecture of Android, covering each co
 
 The Android operating system is built on a layered architecture designed to manage mobile-specific functionalities while maintaining performance and security. Each layer serves a distinct role, enabling efficient interactions between hardware, core system processes, and applications.
 
-![android-stack_2x](https://github.com/user-attachments/assets/aa45c9c5-93b9-46a0-b777-56b90f9573bb)
+<img src="https://github.com/user-attachments/assets/aa45c9c5-93b9-46a0-b777-56b90f9573bb" alt="android-stack" width="500"/>
 
 ---
 
 ## Linux Kernel Layer
 
-![android-stack_2x](https://github.com/user-attachments/assets/a512b24a-3a10-4910-96ef-28d56810bef4)
+<img src="https://github.com/user-attachments/assets/a512b24a-3a10-4910-96ef-28d56810bef4" alt="android-stack_2x" width="500"/>
 
 - **Role**: Forms the foundational layer of Android, providing core system services such as memory, power management, and process management.
 - **Components**:
@@ -44,7 +44,7 @@ The Android operating system is built on a layered architecture designed to mana
 
 ## Hardware Abstraction Layer (HAL)
 
-![android-stack_hal](https://github.com/user-attachments/assets/00c81bf9-b96d-4b0b-8a1f-fb1d5a158476)
+<img src="https://github.com/user-attachments/assets/00c81bf9-b96d-4b0b-8a1f-fb1d5a158476" alt="android-stack_hal" width="500"/>
 
 - **Role**: Acts as a mediator between Android’s higher-level system services and hardware-specific code.
 - **Components**:
@@ -60,7 +60,7 @@ The Android operating system is built on a layered architecture designed to mana
 
 ## Android Runtime (ART)
 
-![android-stack_art](https://github.com/user-attachments/assets/ba1286b2-3bfb-4c15-afad-8e8f8a7c05a1)
+<img src="https://github.com/user-attachments/assets/ba1286b2-3bfb-4c15-afad-8e8f8a7c05a1" alt="android-stack_art" width="500"/>
 
 - **Role**: Executes Android applications and optimizes their performance.
 - **Components**:
@@ -76,7 +76,7 @@ The Android operating system is built on a layered architecture designed to mana
 
 ## Native Libraries and C/C++ Libraries
 
-![android-stack_native](https://github.com/user-attachments/assets/4518d2da-51c8-4ece-bfd1-35b835fd78e6)
+<img src="https://github.com/user-attachments/assets/4518d2da-51c8-4ece-bfd1-35b835fd78e6" alt="android-stack_native" width="500"/>
 
 - **Role**: Provide essential functionalities to the Android OS, supporting core features and apps.
 - **Components**:
@@ -100,7 +100,7 @@ The Android operating system is built on a layered architecture designed to mana
 
 ## Android Framework
 
-![android-stack_api](https://github.com/user-attachments/assets/ce5be2f1-f26a-4e72-987f-93ef0702f42a)
+<img src="https://github.com/user-attachments/assets/ce5be2f1-f26a-4e72-987f-93ef0702f42a" alt="android-stack_api" width="500"/>
 
 - **Role**: Provides a collection of Java APIs for developers to interact with core Android components and services.
 - **Components**:
@@ -116,7 +116,7 @@ The Android operating system is built on a layered architecture designed to mana
 
 ## Application Layer
 
-![android-stack_app](https://github.com/user-attachments/assets/0cd99524-afbb-4476-bed8-8fda11edf579)
+<img src="https://github.com/user-attachments/assets/0cd99524-afbb-4476-bed8-8fda11edf579" alt="android-stack_app" width="500"/>
 
 - **Role**: Represents the topmost layer where user applications operate, utilizing the Android framework and system services.
 - **Components**:
