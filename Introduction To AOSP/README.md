@@ -121,8 +121,8 @@ Today, AOSP powers many automotive systems, from infotainment consoles to electr
 ## 7. **Use Cases of AOSP in Automotive Systems**
 
 - **In-Car Infotainment Systems**: AOSP is widely used to power in-car entertainment systems, offering features like navigation, music streaming, and connectivity.
-- **Connected Car Ecosystems**: AOSP enables integration with cloud-based services, supporting features like remote diagnostics and over-the-air software updates.
-- **Autonomous Driving**: As the automotive industry moves toward autonomous vehicles, AOSP can support integration with sensors, cameras, and machine learning algorithms for navigation and control.
+- **Connected Car Ecosystems**: AOSP enables integration with the broader ecosystem of connected devices, supporting features like smartphone connectivity, cloud services, and over-the-air updates.
+- **Driver Assistance Systems**: By integrating AOSP with sensors and cameras, automakers can develop systems for autonomous driving or advanced driver assistance systems (ADAS).
 
 ---
 
