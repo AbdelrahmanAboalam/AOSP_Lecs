@@ -6,34 +6,34 @@ This README provides an in-depth comparison of Android and Linux, focusing on ar
 
 ## Agenda 
 
-1. [**Overview**](#overview)  
-   - Introduction to Linux and Android  
+1. [**Overview**](#1-overview)  
+   - Introduction to Linux and Android
    - Primary use cases and system focus  
 
-2. [**Key Architectural Differences**](#key-architectural-differences)  
-   - System Layers and Structure  
-   - Kernel Modifications  
-   - Filesystem Differences  
+2. [**Key Architectural Differences**](#2-key-architectural-differences)  
+   - [System Layers and Structure](#system-layers)
+   - [Kernel Modifications](#kernel-modifications)
+   - [Filesystem Differences](#file-system)
 
-3. [**Core Libraries and User-space Differences**](#core-libraries-and-user-space-differences)  
-   - Comparison of C Libraries: glibc vs. Bionic  
-   - Native Daemons and Services  
-   - Virtual Machine: ART vs. Linux Execution Model  
+3. [**Core Libraries and User-space Differences**](#3-core-libraries-and-user-space-differences)  
+   - [Comparison of C Libraries: glibc vs. Bionic](#c-library) 
+   - [Native Daemons and Services](#native-daemons-and-services)
+   - [Virtual Machine: ART vs. Linux Execution Model](#virtual-machine)
 
-4. [**Security Models**](#security-models)  
-   - SELinux and Security Policies  
+4. [**Security Models**](#4-security-models)  
+   - SELinux and Security Policies
    - Application Sandbox and Permissions Model  
    - Logging and Debugging Mechanisms  
 
-5. [**App Ecosystem and User Interface**](#app-ecosystem-and-user-interface)  
-   - UI Frameworks and Graphical Interfaces  
-   - App Installation and Distribution Models  
+5. [**App Ecosystem and User Interface**](#5-app-ecosystem-and-user-interface)  
+   - [UI Frameworks and Graphical Interfaces](#ui-framework)
+   - [App Installation and Distribution Models](#app-installation-and-distribution)  
 
-6. [**Development Environment**](#development-environment)  
+6. [**Development Environment**](#6-development-environment)  
    - Programming Languages and Tools  
    - Build Systems and IDEs  
 
-7. [**Conclusion**](#conclusion)  
+7. [**Conclusion**](#7-conclusion)  
    - Summary of Differences  
    - Quick Comparison Table  
 
