@@ -3,7 +3,7 @@
 1. [Overview of AOSP and Its Role in Automotive Systems](#overview-of-aosp-and-its-role-in-automotive-systems)
 2. [Why Car OEMs Choose AOSP](#why-car-oems-choose-aosp)
 3. [AOSP vs. Standard Linux](#aosp-vs.-standard-linux)
-4. [Choosing the Right Platform: AOSP or Standard Linux?](#choosing-the-righ-platform:-aosp-or-standard-linux?)
+4. [Choosing the Right Platform: AOSP or Standard Linux?](#choosing-the-right-platform-aosp-or-standard-linux)
 5. [History of AOSP and Its Evolution](#history-of-aosp-and-its-evolution)
 6. [Key Benefits of AOSP in Automotive](#key-benefits-of-aosp-in-automotive)
 7. [Use Cases of AOSP in Automotive Systems](#use-cases-of-aosp-in-automotive-systems)
