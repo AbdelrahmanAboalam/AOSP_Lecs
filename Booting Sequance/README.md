@@ -48,7 +48,7 @@ This README outlines the boot process in Android, from initial power-up to launc
       - `debuggerd`: Manages debugging processes.
       - `rild`: Manages the radio interface layer for telecommunication.
       - `mediaserver`: Manages multimedia processing.
-      - `adbd`: Android Debug Bridge daemon for debugging.
+      - `adbd`: Android Debug Bridge daemon for debugging.  
 
 ## 5. **Ramdisk**
 - **Role**: Serves as a temporary filesystem and provides essential scripts and binaries for the initial boot.
@@ -87,20 +87,7 @@ This README outlines the boot process in Android, from initial power-up to launc
     - **Media Service**: Manages audio and video playback services.
   - **Service Execution Order**: Each service runs in its own Dalvik or ART thread to ensure smooth system performance and isolation.
 
-## 8. **Native Daemons**
-- **Role**: Supports various system-level operations and hardware functions.
-- **Details**:
-  - **Services**:
-    - **vold**: Manages volumes and filesystem mounting.
-    - **netd**: Provides network management services, including Wi-Fi and data network controls.
-    - **rild**: Interfaces with radio hardware for cellular networks.
-    - **adbd**: Enables debugging capabilities over USB or network.
-  - **Additional Daemons**:
-    - **bootanimation**: Displays the Android boot animation.
-    - **bluetoothd**: Manages Bluetooth connections and settings.
-    - **dbus-daemon**: Provides inter-process communication for hardware like GPS and sensors.
-
-## 9. **Home Screen (Home Launcher)**
+## 8. **Home Screen (Home Launcher)**
 - **Role**: Launches the Android home interface, signaling the device is ready for user interaction.
 - **Details**:
   - **Execution**:
@@ -108,7 +95,6 @@ This README outlines the boot process in Android, from initial power-up to launc
     - The Home Launcher displays the main user interface and acts as the primary access point for launching apps.
   - **Completion Signal**:
     - Sends the `ACTION_BOOT_COMPLETED` broadcast, signaling that the Android OS has fully booted and is operational.
-
 ---
 
 This README provides detailed explanations for each stage, covering both essential functions and technical elements for a comprehensive understanding of the Android boot process. Let me know if you need further technical elaboration on any specific component.
