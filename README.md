@@ -1,6 +1,5 @@
 # AOSP_Lecs
 
-
 # in part 3 "User and Group" show me the avaiable Users and Groups i can use with my servicec 
 
 In the context of Android's `init.rc` file, the `user` and `group` keys define the **user and group** under which the service will run. These parameters help ensure that the service has the appropriate level of **access control** and **privileges** when it is started. 
