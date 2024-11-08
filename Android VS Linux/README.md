@@ -11,14 +11,14 @@ This README provides an in-depth comparison of Android and Linux, focusing on ar
    - Primary use cases and system focus  
 
 2. [**Key Architectural Differences**](#2-key-architectural-differences)  
-   - [System Layers and Structure](#system-layers)
-   - [Kernel Modifications](#kernel-modifications)
-   - [Filesystem Differences](#file-system)
+   - System Layers and Structure
+   - Kernel Modifications
+   - Filesystem Differences
 
 3. [**Core Libraries and User-space Differences**](#3-core-libraries-and-user-space-differences)  
-   - [Comparison of C Libraries: glibc vs. Bionic](#c-library) 
-   - [Native Daemons and Services](#native-daemons-and-services)
-   - [Virtual Machine: ART vs. Linux Execution Model](#virtual-machine)
+   - Comparison of C Libraries: glibc vs. Bionic 
+   - Native Daemons and Services
+   - Virtual Machine: ART vs. Linux Execution Model
 
 4. [**Security Models**](#4-security-models)  
    - SELinux and Security Policies
@@ -26,8 +26,8 @@ This README provides an in-depth comparison of Android and Linux, focusing on ar
    - Logging and Debugging Mechanisms  
 
 5. [**App Ecosystem and User Interface**](#5-app-ecosystem-and-user-interface)  
-   - [UI Frameworks and Graphical Interfaces](#ui-framework)
-   - [App Installation and Distribution Models](#app-installation-and-distribution)  
+   - UI Frameworks and Graphical Interfaces
+   - App Installation and Distribution Models
 
 6. [**Development Environment**](#6-development-environment)  
    - Programming Languages and Tools  
