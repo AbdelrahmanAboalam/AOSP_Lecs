@@ -1,3 +1,7 @@
+# Introduction to AOSP and Standard Linux for Automotive Applications
+
+This README provides a comprehensive guide to understanding the Android Open Source Project (AOSP) and its relevance in automotive systems. It explains why Automotive OEMs (Original Equipment Manufacturers) have adopted AOSP for their in-car infotainment systems and explores the comparison between AOSP and Standard Linux for creating automotive applications.
+
 ## Agenda
 
 1. [Overview of AOSP and Its Role in Automotive Systems](#overview-of-aosp-and-its-role-in-automotive-systems)
