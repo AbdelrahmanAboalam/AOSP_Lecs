@@ -4,6 +4,19 @@ This README outlines the boot process in Android, from initial power-up to launc
 
 ---
 
+## Agenda
+
+1. [**Bootloader**](#1-bootloader)  
+2. [**Kernel**](#2-kernel)  
+3. [**First Stage Init**](#3-first-stage-init)  
+4. [**Second Stage Init**](#4-second-stage-init)  
+5. [**Ramdisk**](#5-ramdisk)  
+6. [**Zygote**](#6-zygote)  
+7. [**System Server**](#7-system-server)  
+8. [**Home Screen (Home Launcher)**](#8-home-screen-home-launcher) 
+
+---
+
 ## 1. **Bootloader**
 - **Role**: The bootloader is a low-level program that initiates the startup of an Android device.
 - **Details**:
@@ -95,6 +108,5 @@ This README outlines the boot process in Android, from initial power-up to launc
     - The Home Launcher displays the main user interface and acts as the primary access point for launching apps.
   - **Completion Signal**:
     - Sends the `ACTION_BOOT_COMPLETED` broadcast, signaling that the Android OS has fully booted and is operational.
----
 
-This README provides detailed explanations for each stage, covering both essential functions and technical elements for a comprehensive understanding of the Android boot process. Let me know if you need further technical elaboration on any specific component.
+---
