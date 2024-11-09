@@ -20,7 +20,7 @@ This README provides an overview of the primary directories within AOSP, detaili
 12. [System](#12-system)
 13. [Toolchain](#13-toolchain)
 14. [Out](#14-out)
-15. [Summary](#15-summary)
+15. [Summary](#summary)
 
 ---
 
