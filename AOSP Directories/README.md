@@ -6,21 +6,21 @@ This README provides an overview of the primary directories within AOSP, detaili
 
 ## Agenda
 
-1. [Art](#art)
-2. [Bionic](#bionic)
-3. [Build](#build)
-4. [Cts (Compatibility Test Suite)](#cts-compatibility-test-suite)
-5. [Dalvik](#dalvik)
-6. [Device](#device)
-7. [External](#external)
-8. [Frameworks](#frameworks)
-9. [Hardware](#hardware)
-10. [Packages](#packages)
-11. [Prebuilts](#prebuilts)
-12. [System](#system)
-13. [Toolchain](#toolchain)
-14. [Out](#out)
-15. [Summary](#summary)
+1. [Art](#1-art)
+2. [Bionic](#2-bionic)
+3. [Build](#3-build)
+4. [Cts (Compatibility Test Suite)](#4-cts-compatibility-test-suite)
+5. [Dalvik](#5-dalvik)
+6. [Device](#6-device)
+7. [External](#7-external)
+8. [Frameworks](#8-frameworks)
+9. [Hardware](#9-hardware)
+10. [Packages](#10-packages)
+11. [Prebuilts](#11-prebuilts)
+12. [System](#12-system)
+13. [Toolchain](#13-toolchain)
+14. [Out](#14-out)
+15. [Summary](#15-summary)
 
 ---
 
