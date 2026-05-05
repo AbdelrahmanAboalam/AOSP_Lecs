@@ -13,55 +13,55 @@ This README is for Android Automotive engineers who need to understand how Syste
 - [2. SystemUI in Normal Android vs Android Automotive](#2-systemui-in-normal-android-vs-android-automotive)
 - [3. Where SystemUI Lives Inside AOSP](#3-where-systemui-lives-inside-aosp)
 - [4. Main Responsibilities of SystemUI](#4-main-responsibilities-of-systemui)
-  - [4.1 Draw system bars](#1-draw-system-bars)
-  - [4.2 Listen to system state](#2-listen-to-system-state)
-  - [4.3 Manage overlays](#3-manage-overlays)
-  - [4.4 Control navigation](#4-control-navigation)
-  - [4.5 Handle notifications](#5-handle-notifications)
-  - [4.6 Multi-display support](#6-multi-display-support)
+  - [4.1 Draw System Bars](#41-draw-system-bars)
+  - [4.2 Listen to System State](#42-listen-to-system-state)
+  - [4.3 Manage Overlays](#43-manage-overlays)
+  - [4.4 Control Navigation](#44-control-navigation)
+  - [4.5 Handle Notifications](#45-handle-notifications)
+  - [4.6 Multi-Display Support](#46-multi-display-support)
 - [5. Important SystemUI Components](#5-important-systemui-components)
 - [6. How SystemUI Starts When Android Boots](#6-how-systemui-starts-when-android-boots)
 - [7. SystemUI Architecture](#7-systemui-architecture)
 - [8. Automotive SystemUI / CarSystemUI](#8-automotive-systemui--carsystemui)
 - [9. How to Customize Existing SystemUI](#9-how-to-customize-existing-systemui)
-  - [9.1 Change layouts](#1-change-layouts)
-  - [9.2 Change drawables](#2-change-drawables)
-  - [9.3 Change dimensions](#3-change-dimensions)
-  - [9.4 Change colors](#4-change-colors)
-  - [9.5 Change behavior in controllers](#5-change-behavior-in-controllers)
+  - [9.1 Change Layouts](#91-change-layouts)
+  - [9.2 Change Drawables](#92-change-drawables)
+  - [9.3 Change Dimensions](#93-change-dimensions)
+  - [9.4 Change Colors](#94-change-colors)
+  - [9.5 Change Behavior in Controllers](#95-change-behavior-in-controllers)
 - [10. How to Create Your Own SystemUI](#10-how-to-create-your-own-systemui)
-  - [10.1 Option A: Customize existing SystemUI](#option-a-customize-existing-systemui)
-  - [10.2 Option B: Create a new SystemUI APK from scratch](#option-b-create-a-new-systemui-apk-from-scratch)
-  - [10.3 Step 1: Create module structure](#step-1-create-module-structure)
-  - [10.4 Step 2: AndroidManifest.xml](#step-2-androidmanifestxml)
-  - [10.5 Step 3: Create SystemUI service](#step-3-create-systemui-service)
-  - [10.6 Step 4: Create system bar controller](#step-4-create-system-bar-controller)
-  - [10.7 Step 5: Create custom view](#step-5-create-custom-view)
-  - [10.8 Step 6: Layout XML](#step-6-layout-xml)
-  - [10.9 Step 7: Android.bp](#step-7-androidbp)
-  - [10.10 Step 8: Add to product makefile](#step-8-add-to-product-makefile)
-  - [10.11 Step 9: Install as priv-app](#step-9-install-as-priv-app)
+  - [10.1 Option A: Customize Existing SystemUI](#101-option-a-customize-existing-systemui)
+  - [10.2 Option B: Create a New SystemUI APK from Scratch](#102-option-b-create-a-new-systemui-apk-from-scratch)
+  - [10.3 Step 1: Create Module Structure](#103-step-1-create-module-structure)
+  - [10.4 Step 2: AndroidManifest.xml](#104-step-2-androidmanifestxml)
+  - [10.5 Step 3: Create SystemUI Service](#105-step-3-create-systemui-service)
+  - [10.6 Step 4: Create System Bar Controller](#106-step-4-create-system-bar-controller)
+  - [10.7 Step 5: Create Custom View](#107-step-5-create-custom-view)
+  - [10.8 Step 6: Layout XML](#108-step-6-layout-xml)
+  - [10.9 Step 7: Android.bp](#109-step-7-androidbp)
+  - [10.10 Step 8: Add to Product Makefile](#1010-step-8-add-to-product-makefile)
+  - [10.11 Step 9: Install as priv-app](#1011-step-9-install-as-priv-app)
 - [11. Build and Push SystemUI APK](#11-build-and-push-systemui-apk)
 - [12. Common Automotive SystemUI Use Cases](#12-common-automotive-systemui-use-cases)
-  - [12.1 Add new button to side bar](#use-case-1-add-new-button-to-side-bar)
-  - [12.2 Detect which app is on top](#use-case-2-detect-which-app-is-on-top)
-  - [12.3 Change UI based on night mode](#use-case-3-change-ui-based-on-night-mode)
-  - [12.4 Show glow when map is visible](#use-case-4-show-glow-when-map-is-visible)
+  - [12.1 Add New Button to Side Bar](#121-add-new-button-to-side-bar)
+  - [12.2 Detect Which App Is on Top](#122-detect-which-app-is-on-top)
+  - [12.3 Change UI Based on Night Mode](#123-change-ui-based-on-night-mode)
+  - [12.4 Show Glow When Map Is Visible](#124-show-glow-when-map-is-visible)
 - [13. Debugging SystemUI](#13-debugging-systemui)
-  - [13.1 Check logs](#1-check-logs)
-  - [13.2 Check crash logs](#2-check-crash-logs)
-  - [13.3 Restart SystemUI manually](#3-restart-systemui-manually)
-  - [13.4 Check installed APK path](#4-check-installed-apk-path)
-  - [13.5 Check permissions](#5-check-permissions)
-  - [13.6 Check windows](#6-check-windows)
-  - [13.7 Check top activity](#7-check-top-activity)
+  - [13.1 Check Logs](#131-check-logs)
+  - [13.2 Check Crash Logs](#132-check-crash-logs)
+  - [13.3 Restart SystemUI Manually](#133-restart-systemui-manually)
+  - [13.4 Check Installed APK Path](#134-check-installed-apk-path)
+  - [13.5 Check Permissions](#135-check-permissions)
+  - [13.6 Check Windows](#136-check-windows)
+  - [13.7 Check Top Activity](#137-check-top-activity)
 - [14. Best Practices](#14-best-practices)
-  - [14.1 Do not put heavy logic in views](#1-do-not-put-heavy-logic-in-views)
-  - [14.2 Keep SystemUI lightweight](#2-keep-systemui-lightweight)
-  - [14.3 Be careful with animations](#3-be-careful-with-animations)
-  - [14.4 Always test on real bench hardware](#4-always-test-on-real-bench-hardware)
-  - [14.5 Keep a backup before pushing APK](#5-keep-a-backup-before-pushing-apk)
-  - [14.6 Add safe logs](#6-add-safe-logs)
+  - [14.1 Do Not Put Heavy Logic in Views](#141-do-not-put-heavy-logic-in-views)
+  - [14.2 Keep SystemUI Lightweight](#142-keep-systemui-lightweight)
+  - [14.3 Be Careful with Animations](#143-be-careful-with-animations)
+  - [14.4 Always Test on Real Hardware](#144-always-test-on-real-hardware)
+  - [14.5 Keep a Backup Before Pushing APK](#145-keep-a-backup-before-pushing-apk)
+  - [14.6 Add Safe Logs](#146-add-safe-logs)
 - [15. Final Mental Model](#15-final-mental-model)
 - [16. Recommended Practical Exercise](#16-recommended-practical-exercise)
 
@@ -168,17 +168,17 @@ Example Automotive layout:
 
 In many AOSP Automotive projects, SystemUI is customized heavily because OEMs want a unique car experience.
 
-That is why you may see apps like:
+That is why you may see apps or modules like:
 
 ```text
 SystemUI
 CarSystemUI
-CeerCarSystemUI
+CustomCarSystemUI
 CarLauncher
 CarSystemBar
 ```
 
-In your case, because you work on Automotive IVI, you are likely dealing with a custom version of **CarSystemUI**.
+In a real Automotive IVI project, you will often deal with a customized version of **CarSystemUI**.
 
 ---
 
@@ -222,7 +222,7 @@ device/<vendor>/<product>/...
 In your project, based on your previous work, you have paths like:
 
 ```bash
-CeerCarSystemUI
+CustomCarSystemUI
 CarSystemBarLeftView
 CarSystemBarRightView
 CarSystemBarView.java
@@ -236,7 +236,7 @@ So your actual SystemUI is probably a customized Automotive SystemUI APK.
 
 SystemUI has many responsibilities. The most important ones are:
 
-### 1. Draw system bars
+### 4.1 Draw System Bars
 
 SystemUI draws bars around apps.
 
@@ -266,7 +266,7 @@ Signal status
 
 ---
 
-### 2. Listen to system state
+### 4.2 Listen to System State
 
 SystemUI listens to Android system events, such as:
 
@@ -299,7 +299,7 @@ VHAL signals
 
 ---
 
-### 3. Manage overlays
+### 4.3 Manage Overlays
 
 SystemUI can show UI on top of other apps.
 
@@ -317,7 +317,7 @@ Car HVAC overlay
 
 ---
 
-### 4. Control navigation
+### 4.4 Control Navigation
 
 SystemUI often owns navigation buttons:
 
@@ -344,7 +344,7 @@ Left bar:
 
 ---
 
-### 5. Handle notifications
+### 4.5 Handle Notifications
 
 On phones, SystemUI owns the notification shade.
 
@@ -359,7 +359,7 @@ Cluster-safe notification UI
 
 ---
 
-### 6. Multi-display support
+### 4.6 Multi-Display Support
 
 Automotive systems may have multiple displays:
 
@@ -368,8 +368,8 @@ Center display
 Passenger display
 Rear display
 Instrument cluster
-ROD display
-CCS display
+Secondary display
+Primary display
 ```
 
 SystemUI may need to know:
@@ -378,7 +378,7 @@ SystemUI may need to know:
 Which display is active?
 Which app is on top?
 Which display should show the bar?
-Should CCS and ROD have separate home contexts?
+Should each display have an independent home/context state?
 ```
 
 This is very important in Automotive AOSP.
@@ -681,7 +681,7 @@ Usually you customize existing SystemUI.
 
 Common customization areas:
 
-### 1. Change layouts
+### 9.1 Change Layouts
 
 Example:
 
@@ -701,7 +701,7 @@ You can add or remove buttons:
 
 ---
 
-### 2. Change drawables
+### 9.2 Change Drawables
 
 Example:
 
@@ -725,7 +725,7 @@ Borders
 
 ---
 
-### 3. Change dimensions
+### 9.3 Change Dimensions
 
 Example:
 
@@ -740,7 +740,7 @@ res/values/dimens.xml
 
 ---
 
-### 4. Change colors
+### 9.4 Change Colors
 
 Example:
 
@@ -756,7 +756,7 @@ res/values/colors.xml
 
 ---
 
-### 5. Change behavior in controllers
+### 9.5 Change Behavior in Controllers
 
 Example:
 
@@ -782,7 +782,7 @@ If night mode changes, change theme.
 
 There are two meanings of “make my own SystemUI”.
 
-### Option A: Customize existing SystemUI
+### 10.1 Option A: Customize Existing SystemUI
 
 This is the recommended way.
 
@@ -801,7 +801,7 @@ This is safer because Android already knows how to start your SystemUI.
 
 ---
 
-### Option B: Create a new SystemUI APK from scratch
+### 10.2 Option B: Create a New SystemUI APK from Scratch
 
 This is possible, but harder.
 
@@ -838,7 +838,7 @@ platform certificate
 
 ---
 
-### Step 1: Create module structure
+### 10.3 Step 1: Create Module Structure
 
 Example:
 
@@ -865,7 +865,7 @@ packages/apps/MyCarSystemUI/
 
 ---
 
-### Step 2: AndroidManifest.xml
+### 10.4 Step 2: AndroidManifest.xml
 
 Example:
 
@@ -906,7 +906,7 @@ But this only works properly for privileged/system apps.
 
 ---
 
-### Step 3: Create SystemUI service
+### 10.5 Step 3: Create SystemUI Service
 
 Example:
 
@@ -951,7 +951,7 @@ public class MySystemUIService extends Service {
 
 ---
 
-### Step 4: Create system bar controller
+### 10.6 Step 4: Create System Bar Controller
 
 ```java
 package com.example.mycarsystemui;
@@ -1024,7 +1024,7 @@ For Automotive, your project may already have custom window handling inside `Car
 
 ---
 
-### Step 5: Create custom view
+### 10.7 Step 5: Create Custom View
 
 ```java
 package com.example.mycarsystemui;
@@ -1063,7 +1063,7 @@ public class MySystemBarView extends LinearLayout {
 
 ---
 
-### Step 6: Layout XML
+### 10.8 Step 6: Layout XML
 
 ```xml
 <com.example.mycarsystemui.MySystemBarView
@@ -1087,7 +1087,7 @@ public class MySystemBarView extends LinearLayout {
 
 ---
 
-### Step 7: Android.bp
+### 10.9 Step 7: Android.bp
 
 Example:
 
@@ -1125,7 +1125,7 @@ These are important because SystemUI needs access to APIs and permissions normal
 
 ---
 
-### Step 8: Add to product makefile
+### 10.10 Step 8: Add to Product Makefile
 
 You need to include your APK in the product image.
 
@@ -1151,7 +1151,7 @@ depending on your project.
 
 ---
 
-### Step 9: Install as priv-app
+### 10.11 Step 9: Install as priv-app
 
 Your APK should end up in something like:
 
@@ -1177,10 +1177,10 @@ For Automotive builds, many OEM apps live under:
 /system_ext/priv-app/
 ```
 
-Example from your workflow:
+Example installation path:
 
 ```bash
-/system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk
+/system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk
 ```
 
 ---
@@ -1190,7 +1190,7 @@ Example from your workflow:
 If you are modifying an existing SystemUI APK, you usually build it like:
 
 ```bash
-m CeerCarSystemUI
+m CustomCarSystemUI
 ```
 
 or:
@@ -1214,7 +1214,7 @@ find out/target/product -name "*SystemUI*.apk"
 Example:
 
 ```bash
-out/target/product/<target>/system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk
+out/target/product/<target>/system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk
 ```
 
 To push it to a device:
@@ -1223,10 +1223,10 @@ To push it to a device:
 adb root
 adb remount
 adb shell stop
-adb push CeerCarSystemUI.apk /system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk
-adb shell chmod 0644 /system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk
-adb shell chown root:root /system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk
-adb shell restorecon /system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk
+adb push CustomCarSystemUI.apk /system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk
+adb shell chmod 0644 /system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk
+adb shell chown root:root /system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk
+adb shell restorecon /system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk
 adb reboot
 ```
 
@@ -1235,7 +1235,7 @@ Before replacing it, backup the old one:
 ```bash
 adb root
 adb remount
-adb pull /system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk ./CeerCarSystemUI_backup.apk
+adb pull /system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk ./CustomCarSystemUI_backup.apk
 ```
 
 Then push the new one.
@@ -1244,7 +1244,7 @@ Then push the new one.
 
 ## 12. Common Automotive SystemUI Use Cases
 
-### Use case 1: Add new button to side bar
+### 12.1 Add New Button to Side Bar
 
 You need to change:
 
@@ -1283,7 +1283,7 @@ navButton.setOnClickListener(v -> {
 
 ---
 
-### Use case 2: Detect which app is on top
+### 12.2 Detect Which App Is on Top
 
 In Automotive SystemUI, you may need to know if Native Map is currently visible.
 
@@ -1300,8 +1300,8 @@ Pseudo-code:
 
 ```java
 boolean isNativeMap(ComponentName topActivity) {
-    return "com.luxoft.herenativemapview".equals(topActivity.getPackageName())
-            && "com.luxoft.herenativemapview.MainActivity"
+    return "com.example.map".equals(topActivity.getPackageName())
+            && "com.example.map.MainActivity"
                 .equals(topActivity.getClassName());
 }
 ```
@@ -1316,11 +1316,11 @@ if (isNativeMap) {
 }
 ```
 
-This matches the kind of work you are doing with Native Map visibility and contextual UI.
+This is a common pattern for map visibility, navigation apps, and contextual UI behavior in Automotive systems.
 
 ---
 
-### Use case 3: Change UI based on night mode
+### 12.3 Change UI Based on Night Mode
 
 You may listen to:
 
@@ -1357,7 +1357,7 @@ Update SystemUI resources/state
 
 ---
 
-### Use case 4: Show glow when map is visible
+### 12.4 Show Glow When Map Is Visible
 
 This is common in custom IVI systems.
 
@@ -1397,7 +1397,7 @@ public void setNativeMapVisible(boolean visible) {
 
 SystemUI debugging is very important because small mistakes can crash the whole UI.
 
-### 1. Check logs
+### 13.1 Check Logs
 
 Use:
 
@@ -1405,10 +1405,10 @@ Use:
 adb logcat | grep -i SystemUI
 ```
 
-For your custom app:
+For a custom Automotive SystemUI app:
 
 ```bash
-adb logcat | grep -i CeerCarSystemUI
+adb logcat | grep -i CustomCarSystemUI
 ```
 
 Or:
@@ -1429,7 +1429,7 @@ adb logcat -s WindowManager
 
 ---
 
-### 2. Check crash logs
+### 13.2 Check Crash Logs
 
 ```bash
 adb logcat -b crash
@@ -1451,12 +1451,12 @@ Process: com.android.systemui
 or:
 
 ```text
-Process: com.ceer.systemui
+Process: com.example.carsystemui
 ```
 
 ---
 
-### 3. Restart SystemUI manually
+### 13.3 Restart SystemUI Manually
 
 Depending on package name:
 
@@ -1467,7 +1467,7 @@ adb shell pkill com.android.systemui
 or:
 
 ```bash
-adb shell pkill com.ceer.carsystemui
+adb shell pkill com.example.carsystemui
 ```
 
 Android may restart it automatically.
@@ -1483,7 +1483,7 @@ But that restarts the Android framework and is heavier.
 
 ---
 
-### 4. Check installed APK path
+### 13.4 Check Installed APK Path
 
 ```bash
 adb shell pm path com.android.systemui
@@ -1492,12 +1492,12 @@ adb shell pm path com.android.systemui
 or your package:
 
 ```bash
-adb shell pm path com.ceer.carsystemui
+adb shell pm path com.example.carsystemui
 ```
 
 ---
 
-### 5. Check permissions
+### 13.5 Check Permissions
 
 ```bash
 adb shell dumpsys package com.android.systemui
@@ -1513,7 +1513,7 @@ signatures
 
 ---
 
-### 6. Check windows
+### 13.6 Check Windows
 
 ```bash
 adb shell dumpsys window
@@ -1534,7 +1534,7 @@ adb shell dumpsys window | grep -i status
 
 ---
 
-### 7. Check top activity
+### 13.7 Check Top Activity
 
 ```bash
 adb shell dumpsys activity activities | grep -i top
@@ -1557,7 +1557,7 @@ adb shell dumpsys activity activities
 
 ## 14. Best Practices
 
-### 1. Do not put heavy logic in views
+### 14.1 Do Not Put Heavy Logic in Views
 
 Bad:
 
@@ -1575,7 +1575,7 @@ Manager/Repository = system data
 
 ---
 
-### 2. Keep SystemUI lightweight
+### 14.2 Keep SystemUI Lightweight
 
 SystemUI runs all the time. Heavy work can affect the whole system.
 
@@ -1592,7 +1592,7 @@ Memory leaks
 
 ---
 
-### 3. Be careful with animations
+### 14.3 Be Careful with Animations
 
 In Automotive, performance is critical.
 
@@ -1606,11 +1606,11 @@ Do not stop too early if the animation has multiple components
 Monitor CPU/GPU usage
 ```
 
-This is exactly relevant to your Rive optimization work.
+This is especially important when using complex animations or real-time UI components.
 
 ---
 
-### 4. Always test on real bench hardware
+### 14.4 Always Test on Real Hardware
 
 Emulator behavior may differ from bench/device behavior.
 
@@ -1629,19 +1629,19 @@ System bars
 
 ---
 
-### 5. Keep a backup before pushing APK
+### 14.5 Keep a Backup Before Pushing APK
 
 Always do:
 
 ```bash
-adb pull /system_ext/priv-app/CeerCarSystemUI/CeerCarSystemUI.apk ./backup.apk
+adb pull /system_ext/priv-app/CustomCarSystemUI/CustomCarSystemUI.apk ./backup.apk
 ```
 
 before pushing a new one.
 
 ---
 
-### 6. Add safe logs
+### 14.6 Add Safe Logs
 
 Use clear logs:
 
